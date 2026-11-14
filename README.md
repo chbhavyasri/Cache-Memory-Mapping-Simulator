@@ -68,6 +68,8 @@ CacheSimulator/
 ├── .gitignore              # Ignores virtual environments (.venv) and bytecode
 └── README.md               # Project documentation and theoretical specification
 
+---
+
 ## 5. Benchmark Workload & Demonstration
 
 The included `benchmark_trace.txt` file evaluates three critical cache access patterns:
@@ -83,9 +85,11 @@ The included `benchmark_trace.txt` file evaluates three critical cache access pa
   * **Direct-Mapped ($k = 1$):** `0x0000`, `0x0040`, and `0x0080` all map to **Set 0**, causing continuous eviction (thrashing) and a low **20% Hit Rate**.
   * **2-Way Set Associative ($k = 2$):** Both conflicting memory blocks fit into Set 0 simultaneously across **Way 0** and **Way 1**, eliminating the collisions and substantially reducing AMAT.
 
-  ## 6. Sample Performance Output
+---
 
-```text
+## 6. Sample Performance Output
+
+text
 =======================================================
         8086 HARDWARE CACHE ARCHITECTURE SIMULATOR      
 =======================================================
@@ -101,3 +105,5 @@ Address: 0x0080 | Tag: 0x0002 | Set: 0 | Offset: 0 -> [ MISS ]
   Total Hits     : 1
   Total Misses   : 4
   Hit Ratio      : 20%
+
+  ```
